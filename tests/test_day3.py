@@ -1,9 +1,12 @@
+import pytest
+
 from day3.sorted_merge import sorted_merge
 from day3.search_rotated import search_rotated
 from day3.sorted_matrix_search import sorted_matrix_search
 from day3.peaks_valleys import peaks_and_valleys
 
 
+@pytest.mark.sorted_merge
 class TestSortedMerge:
     def test_basic_merge(self):
         a = [1, 3, 5, 0, 0, 0]
@@ -36,6 +39,7 @@ class TestSortedMerge:
         assert a == [-5, -3, -1, 0, 2, 4]
 
 
+@pytest.mark.search_rotated
 class TestSearchRotated:
     def test_not_rotated(self):
         assert search_rotated([1, 2, 3, 4, 5], 3) == 2
@@ -62,6 +66,7 @@ class TestSearchRotated:
         assert search_rotated([3, 1], 1) == 1
 
 
+@pytest.mark.sorted_matrix_search
 class TestSortedMatrixSearch:
     MATRIX = [
         [1, 4, 7, 11],
@@ -92,6 +97,7 @@ class TestSortedMatrixSearch:
         assert sorted_matrix_search([[5]], 3) is None
 
 
+@pytest.mark.peaks_valleys
 class TestPeaksAndValleys:
     @staticmethod
     def _is_valid(arr):

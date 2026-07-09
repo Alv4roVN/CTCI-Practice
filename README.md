@@ -13,9 +13,9 @@ pip install -r requirements.txt
 ## Running tests
 
 ```
-pytest -v                      # everything
+pytest -v                 # everything
 pytest tests/test_day1.py -v   # just one file
-pytest -v -k is_unique          # a single problem, by test name
+pytest -v -m is_unique          # a single problem, by name
 ```
 
 A test fails loudly (`NotImplementedError`) until you implement the

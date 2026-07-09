@@ -1,7 +1,10 @@
+import pytest
+
 from day4.sorted_search_no_size import Listy, sorted_search_no_size
 from day4.rank_from_stream import RankFromStream
 
 
+@pytest.mark.sorted_search_no_size
 class TestSortedSearchNoSize:
     def test_found_basic(self):
         listy = Listy([1, 3, 5, 7, 9, 11, 13])
@@ -31,6 +34,7 @@ class TestSortedSearchNoSize:
         assert sorted_search_no_size(listy, 9999) == values.index(9999)
 
 
+@pytest.mark.rank_from_stream
 class TestRankFromStream:
     """get_rank_of_number(x) = count of tracked values <= x, duplicates
     counted individually. Rank before any tracking is 0."""

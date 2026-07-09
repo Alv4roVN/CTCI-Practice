@@ -1,11 +1,14 @@
 import copy
 
+import pytest
+
 from day2.rotate_matrix import rotate_matrix
 from day2.zero_matrix import zero_matrix
 from day2.stack_min import MinStack
 from day2.sort_stack import sort_stack
 
 
+@pytest.mark.rotate_matrix
 class TestRotateMatrix:
     def test_1x1(self):
         assert rotate_matrix([[1]]) == [[1]]
@@ -37,6 +40,7 @@ class TestRotateMatrix:
         assert rotate_matrix([]) == []
 
 
+@pytest.mark.zero_matrix
 class TestZeroMatrix:
     def test_single_zero(self):
         m = [[1, 2, 3], [4, 0, 6], [7, 8, 9]]
@@ -70,6 +74,7 @@ class TestZeroMatrix:
         assert zero_matrix([]) == []
 
 
+@pytest.mark.stack_min
 class TestMinStack:
     def test_basic_min(self):
         s = MinStack()
@@ -120,6 +125,7 @@ class TestMinStack:
         assert s.min() == -5
 
 
+@pytest.mark.sort_stack
 class TestSortStack:
     """Convention: index -1 of the list is the top of the stack. After
     sorting, the top must hold the smallest value, so read bottom-to-top

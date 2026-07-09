@@ -1,9 +1,12 @@
+import pytest
+
 from day1.is_unique import is_unique
 from day1.check_permutation import check_permutation
 from day1.urlify import urlify
 from day1.string_compression import string_compression
 
 
+@pytest.mark.is_unique
 class TestIsUnique:
     def test_empty_string(self):
         assert is_unique("") is True
@@ -34,6 +37,7 @@ class TestIsUnique:
         assert is_unique("".join(chr(i) for i in range(32, 127))) is True
 
 
+@pytest.mark.check_permutation
 class TestCheckPermutation:
     def test_empty_both(self):
         assert check_permutation("", "") is True
@@ -59,6 +63,7 @@ class TestCheckPermutation:
         assert check_permutation("god", "dog") is True
 
 
+@pytest.mark.urlify
 class TestUrlify:
     def test_basic(self):
         assert urlify("Mr John Smith    ", 13) == "Mr%20John%20Smith"
@@ -76,6 +81,7 @@ class TestUrlify:
         assert urlify("a", 1) == "a"
 
 
+@pytest.mark.string_compression
 class TestStringCompression:
     def test_basic_compression(self):
         assert string_compression("aabcccccaaa") == "a2b1c5a3"
