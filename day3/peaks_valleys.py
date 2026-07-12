@@ -15,5 +15,9 @@ def peaks_and_valleys(arr: List[int]) -> List[int]:
 
     Returns:
         The same list object, rearranged (returned for test convenience).
+
+    Example:
+        peaks_and_valleys([5, 3, 1, 2, 3]) -> [3, 1, 3, 2, 5]  (one valid answer)
+        # check: 3 >= 1 <= 3 >= 2 <= 5 -- alternates, same multiset as input
     """
     raise NotImplementedError

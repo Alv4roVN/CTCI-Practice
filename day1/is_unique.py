@@ -8,5 +8,9 @@ def is_unique(s: str) -> bool:
 
     Returns:
         True if every character in s is unique, False otherwise.
+
+    Example:
+        is_unique("abcdefg") -> True
+        is_unique("hello") -> False   ('l' appears twice)
     """
     raise NotImplementedError

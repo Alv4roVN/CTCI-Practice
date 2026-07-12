@@ -10,5 +10,9 @@ def string_compression(s: str) -> str:
 
     Returns:
         The compressed string, or the original if compression doesn't help.
+
+    Example:
+        string_compression("aabcccccaaa") -> "a2b1c5a3"
+        string_compression("abcdef") -> "abcdef"   (compressed would be longer)
     """
     raise NotImplementedError

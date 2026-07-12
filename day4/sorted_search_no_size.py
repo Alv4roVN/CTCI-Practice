@@ -31,5 +31,10 @@ def sorted_search_no_size(listy: Listy, target: int) -> int:
 
     Returns:
         The index of target, or -1 if not found.
+
+    Example:
+        listy = Listy([1, 3, 5, 7, 9, 11, 13])
+        sorted_search_no_size(listy, 7) -> 3
+        sorted_search_no_size(listy, 4) -> -1
     """
     raise NotImplementedError

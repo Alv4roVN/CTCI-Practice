@@ -12,5 +12,10 @@ def urlify(s: str, true_length: int) -> str:
     Returns:
         The urlified string trimmed to its final length,
         e.g. "Mr%20John%20Smith".
+
+    Example:
+        urlify("Mr John Smith    ", 13) -> "Mr%20John%20Smith"
+        # the 4 trailing spaces are padding for the 2 replaced spaces
+        # (each " " -> "%20" adds 2 extra characters)
     """
     raise NotImplementedError

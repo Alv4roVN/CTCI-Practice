@@ -3,6 +3,13 @@ class MinStack:
     CTCI 3.2 - Stack Min
     A stack that, in addition to push and pop, has a min() method that
     returns the minimum element in the stack, all in O(1) time.
+
+    Example:
+        s = MinStack()
+        s.push(5); s.push(3); s.push(7)
+        s.min()  -> 3
+        s.pop()  -> 7
+        s.min()  -> 3   (3 is still the smallest remaining)
     """
 
     def __init__(self):

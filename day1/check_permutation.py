@@ -9,5 +9,9 @@ def check_permutation(s1: str, s2: str) -> bool:
 
     Returns:
         True if s1 and s2 are permutations of each other, False otherwise.
+
+    Example:
+        check_permutation("god", "dog") -> True
+        check_permutation("god", "cat") -> False
     """
     raise NotImplementedError

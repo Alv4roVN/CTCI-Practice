@@ -13,5 +13,9 @@ def search_rotated(arr: List[int], target: int) -> int:
 
     Returns:
         The index of target in arr, or -1 if not present.
+
+    Example:
+        search_rotated([4, 5, 6, 7, 0, 1, 2], 0) -> 4
+        search_rotated([4, 5, 6, 7, 0, 1, 2], 3) -> -1
     """
     raise NotImplementedError
