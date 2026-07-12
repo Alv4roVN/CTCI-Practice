@@ -20,3 +20,11 @@ pytest -v -m is_unique          # a single problem, by name
 
 A test fails loudly (`NotImplementedError`) until you implement the
 corresponding function — that's expected and tells you what's left to do.
+
+## Timeouts
+
+Every test is capped at 5 seconds (via `pytest-timeout`, configured in
+`pytest.ini`), so an infinite loop fails instead of hanging forever. On
+Windows a timeout kills the whole run (not just that one test), so if
+you suspect a hang, narrow down with `-m <problem_name>` or a single
+test file instead of running everything.
