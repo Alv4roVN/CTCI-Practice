@@ -1,9 +1,9 @@
 import pytest
 
-from day1.is_unique import is_unique
-from day1.check_permutation import check_permutation
-from day1.urlify import urlify
-from day1.string_compression import string_compression
+from strings_and_hashing.is_unique import is_unique
+from strings_and_hashing.check_permutation import check_permutation
+from strings_and_hashing.urlify import urlify
+from strings_and_hashing.string_compression import string_compression
 
 
 @pytest.mark.is_unique

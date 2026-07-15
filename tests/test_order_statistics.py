@@ -1,37 +1,6 @@
 import pytest
 
-from day4.sorted_search_no_size import Listy, sorted_search_no_size
-from day4.rank_from_stream import RankFromStream
-
-
-@pytest.mark.sorted_search_no_size
-class TestSortedSearchNoSize:
-    def test_found_basic(self):
-        listy = Listy([1, 3, 5, 7, 9, 11, 13])
-        assert sorted_search_no_size(listy, 7) == 3
-
-    def test_not_found(self):
-        listy = Listy([1, 3, 5, 7, 9, 11, 13])
-        assert sorted_search_no_size(listy, 4) == -1
-
-    def test_first_element(self):
-        listy = Listy([2, 4, 6, 8])
-        assert sorted_search_no_size(listy, 2) == 0
-
-    def test_last_element(self):
-        listy = Listy([2, 4, 6, 8])
-        assert sorted_search_no_size(listy, 8) == 3
-
-    def test_empty_listy(self):
-        assert sorted_search_no_size(Listy([]), 5) == -1
-
-    def test_single_element_found(self):
-        assert sorted_search_no_size(Listy([5]), 5) == 0
-
-    def test_large_listy(self):
-        values = list(range(1, 20000, 2))  # odd numbers, 1..19999
-        listy = Listy(values)
-        assert sorted_search_no_size(listy, 9999) == values.index(9999)
+from order_statistics.rank_from_stream import RankFromStream
 
 
 @pytest.mark.rank_from_stream
